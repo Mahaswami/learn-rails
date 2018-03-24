@@ -84,6 +84,7 @@ GEM
       activesupport (>= 4.2.0)
     high_voltage (3.0.0)
     i18n (0.8.6)
+    influxdb (0.5.3)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -208,6 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   gibbon
   high_voltage
+  influxdb (~> 0.5.1)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -226,7 +228,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.4.0p0
 
 BUNDLED WITH
-   1.15.1
+   1.16.1

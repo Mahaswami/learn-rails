@@ -1,0 +1,26 @@
+version: '2'
+services:
+
+  influxdb:
+    privileged: true
+    container_name: influxdb
+    image: influxdb:latest
+    ports:
+      - "8086:8086"
+      - "8083:8086"
+      - "8090:8090"
+      - "8099:8099"
+    environment:
+      INFLUXDB_DATA_ENGINE: tsm1
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    volumes:
+      - ./orderfy-config/:/etc/grafana/scripts
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+    links:
+      - influxdb

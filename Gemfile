@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.1'
+ruby '2.4.0'
 gem 'rails', '~> 5.1.2'
 
 # Rails defaults
@@ -45,3 +45,5 @@ end
 group :test do
   gem 'minitest-spec-rails'
 end
+
+gem 'influxdb', '~> 0.5.1'
